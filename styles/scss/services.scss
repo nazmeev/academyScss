@@ -1,0 +1,55 @@
+section.services{
+    @include padd(120px, 190px, 0, 0);
+    background: url($pathCenterLeft) center left no-repeat;
+
+    ul{
+        column-count: 2;
+
+        li{ 
+            @include padd(10px, 10px, 70px, 0);
+            display: block;
+            list-style: none;
+            min-height: 50px;
+            margin-bottom: 20px;
+            h3{
+                @include FontH(22px, $fontFamilyH, normal, bold, $hFontColor);
+            }
+            p{
+                width: 100%;
+                max-width: 500px;
+                margin-top: 10px;
+            }
+        }
+        li#learning{
+            background: url(../images/service-learning.png) left top no-repeat;
+        }
+        li#iphone{
+            background: url(../images/service-iphone.png) left top no-repeat;
+        }
+        li#design{
+            background: url(../images/service-design.png) left top no-repeat;
+        }
+        li#android{
+            background: url(../images/service-android.png) left top no-repeat;
+        }
+        li#game{
+            background: url(../images/service-game.png) left top no-repeat;
+        }
+        li#php{
+            background: url(../images/service-learning.png) left center no-repeat;
+        }
+        li#iphone{
+            background: url(../images/service-php.png) left center no-repeat;
+        }
+    }
+    @media (max-width: $smallSize) {
+        ul{
+            column-count: 1;
+        }
+    }
+}
+@media (max-width: $smallSize) {
+    section.services{
+        @include padd(60px, 90px, 0, 0);
+    }
+}

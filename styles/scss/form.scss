@@ -1,0 +1,35 @@
+section.connection{
+    background: url($pathBottom) right top no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    margin-top: -50px;
+    padding-bottom: 50px;
+
+    .container{
+
+        .form{
+            width: 100%;
+            max-width: 460px;
+            margin: 0 auto;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: $formShadow;
+            
+            background-image: $formGradient;
+
+            .field-button{
+                margin-top: 50px;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .title{
+                font-style: $fontFamilyH;
+                text-align: center;
+                font-size: 31px;
+                font-weight: 900;
+                margin-bottom: 40px;
+                color: $hFontColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+
+@mixin FontH($size, $family, $style, $weight, $color){
+    font-size: $size;
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    color: $color;
+}
+@mixin CardLayer($transform, $bg, $width: 264px, $height: 264px) {
+    transform: rotate($transform);
+    border-radius: 8px;
+    background-color: $bg;
+    width: $width;
+    height: $height;
+}
+@mixin MenuBtnLine($top, $bgColor){
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 5px;
+    background-color: $bgColor;
+    top: $top;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+@mixin MenuBtnRotate($rotate) {
+    top: 0;
+    transform: rotate($rotate);
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+@mixin link($link, $hover, $active, $visited){
+    text-decoration: none;
+    color: $link;
+    &:hover{
+        color: $hover;
+    }
+    &:active{
+        color: $active;
+    }
+    &:visited{
+        color: $visited;
+    }
+}
+@mixin padd($top, $bottom, $left, $right) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin animation($keyframe, $duration, $timing, $count) {
+    animation-name: $keyframe;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    animation-iteration-count: $count;
+    
+}
+

@@ -1,0 +1,165 @@
+@import "variablesdark";  // can be variableslight or variablesdark
+@import "keyframes";
+@import "mixins";
+
+@import "menu";
+//promo section
+@import "promo";
+//Why hire us
+@import "cards";
+//Our services
+@import "services";
+//Send us a message
+@import "form";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.4s linear;
+    font-weight: normal;
+}
+body{
+    background: $bgColor;
+    font-family: $fontFamilyMain;
+    color: $mainFontColor;
+}
+p{
+    color: $secondFontColor;
+    font-size: 16px;
+    line-height: 1.67;
+}
+a{
+    @include link($mainFontColor, darken($mainFontColor, 20%), $secondFontColor, $mainFontColor);
+}
+button{
+    background: $bgButton;
+    color: $mainFontColor;
+    text-align: center;
+    font-size: 14px;
+    width: 220px;
+    min-width: 220px;
+    height: 64px;
+    border-radius: 100px;
+    border-width: 0;
+    text-transform: uppercase;
+    
+    &:hover{
+        background: $bgButtonHover;
+    }
+}
+
+h2{
+    @include FontH(45px, $fontFamilyH, italic, 900, $hFontColor);
+    text-align: center;
+    margin-bottom: 72px;
+}
+input, textarea{
+    width: 100%;
+    border-radius: 4px;
+    background-color: $bgInput;
+    margin-bottom: 8px;
+    min-height: 48px;
+    border: 0 none;
+    padding: 11px;
+    font-size: 16px;
+    color: #8f8f9c;
+}
+::placeholder {
+    color: #8f8f9c;
+    font-size: 16px;
+  }
+
+.wrapper{
+    background-image: $bgGradient;
+    background-size: cover;
+    width: 100%;
+    
+    .shape-wrap{
+        background: $bgShape;
+
+        section{
+            display: flex;
+            justify-content: center;
+            @include animation(jump, 0.82s, cubic-bezier(.36,.07,.19,.97), 1);
+            
+            .container{
+                width: 100%; 
+                max-width: 1440px;
+                margin: 0 20px;
+            }
+        }
+    }
+    
+}
+.logo > a {
+    display: block;
+    width: 135px;
+    height: 42px;
+    background-image: url($pathLogo);
+}
+header{
+    padding: 25px 0;
+    
+    .nav-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .navbar-nav{
+        li{
+            display: inline-block;
+            padding: 0 20px;
+            a{
+                text-transform: uppercase;
+                line-height: 1.97;
+            }
+        }
+        @media (max-width: $smallSize) {
+            li{
+                display: block;
+                padding: 20px 40px;
+                &:hover{
+                    background-color: $secondFontColor;
+                }
+            }
+        }
+    }
+    @media (max-width: $smallSize) {
+        .nav-menu{
+            display: block;
+            width: 100%;
+        }
+        .navbar-nav{
+            width: 100%;
+            background: $bgSmallMenuColor;
+        }
+    }
+    
+}
+
+section.header{
+    background: url($pathTopRight) top right no-repeat;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    color: $secondFontColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    

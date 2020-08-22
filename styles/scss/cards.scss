@@ -1,0 +1,40 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .col{
+        margin-bottom: 50px;
+        text-align: center;
+        box-shadow: $cardShadow;
+
+        .card-img{
+            padding: 20px;
+        }
+        .card-head{
+            font-size: 22px;
+            font-family: $fontFamilyMain;
+            line-height: 30px;
+            margin-bottom: 20px;
+            color: $hFontColor;
+        }
+        .card-text{
+            line-height: 1.5;
+        }
+    }
+    .col:hover{
+        @include animation(shake, 0.82s, cubic-bezier(.36,.07,.19,.97), both);
+    }
+}
+
+.card-wrap1{
+    @include CardLayer(8deg, $cardLayer1);
+}
+.card-wrap2{
+    @include CardLayer(-4deg, $cardLayer2);
+}
+.card-wrap3{
+    @include CardLayer(-4deg, $cardLayer3);
+    padding: 20px;
+}

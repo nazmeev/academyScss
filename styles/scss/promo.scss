@@ -1,0 +1,27 @@
+.promo-section{
+    @include padd(100px, 200px, 0, 100px);
+    font-size: 18px;
+    width: 100%;
+    max-width: 490px;
+
+    h1{
+        @include FontH(55px, $fontFamilyH, italic, bold, $hFontColor);
+        margin-bottom: 32px;
+    }
+
+    p{
+        margin-bottom: 76px;
+    }
+    
+}
+@media (max-width: $smallSize) {
+    .promo-section{
+        p{
+            color: $promoSmallColor;
+        }
+    }
+    .navbar-nav{
+        width: 100%;
+        background: $bgColor;
+    }
+}
